@@ -6,11 +6,6 @@ const Home = () => {
 
     const [name, setName] = useState('mario');
 
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !== id);
-        setBlogs(newBlogs);
-    }
-
     useEffect(() => {
         console.log(`Let's fetch!!!`);
         fetch('http://localhost:8000/blogs')
@@ -24,7 +19,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            {blogs && <BlogList blogs={blogs} title={'All blogs!'} handleDelete={handleDelete} />}
+            {blogs && <BlogList blogs={blogs} title={'All blogs!'} />}
             <button onClick={() => setName('luigi')}>Change name</button>
             <p>{name}</p>
         </div>
