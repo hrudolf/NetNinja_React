@@ -3,25 +3,38 @@ import BlogList from "./BlogList";
 
 const Home = () => {
     const [blogs, setBlogs] = useState(null);
-
-    const [name, setName] = useState('mario');
+    const [isPending, setIsPending] = useState(true);
+    const [errorMessage, setErrorMessage] = useState(null);
 
     useEffect(() => {
         console.log(`Let's fetch!!!`);
         fetch('http://localhost:8000/blogs')
-            .then(res => res.json())
-            .then(data => {
+            .then(res => {
+                console.log(res);
+                if (!res.ok) {
+                    throw Error('Could not fetch the data for that resource');
+                }
+                return res.json()
+            })
+            .then(data => setTimeout(() => {
+                setIsPending(false);
                 setBlogs(data);
-                console.log(data);
+                setErrorMessage(null);
+            }, 1000))
+            .catch(err => {
+                setErrorMessage(err.message);
+                setIsPending(false);
+                console.log(err.message);
             });
+
         console.log('useEffect has just run');
     }, []);
 
     return (
         <div className="home">
+            {errorMessage && <div> Error: {errorMessage} </div>}
+            {isPending && <div>Loading... </div>}
             {blogs && <BlogList blogs={blogs} title={'All blogs!'} />}
-            <button onClick={() => setName('luigi')}>Change name</button>
-            <p>{name}</p>
         </div>
     );
 }
