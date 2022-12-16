@@ -1,0 +1,16 @@
+{
+    "blogs": [
+        {
+            "title": "My second blog",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel error veniam explicabo id suscipit nemo et, quia similique nulla expedita officia libero unde necessitatibus magni ducimus maxime repellat rerum laboriosam.",
+            "author": "rud",
+            "id": 1
+        },
+        {
+            "title": "Party",
+            "body": "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel error veniam explicabo id suscipit nemo et, quia similique nulla expedita officia libero unde necessitatibus magni ducimus maxime repellat rerum laboriosam.",
+            "author": "rud2",
+            "id": 2
+        }
+    ]
+}
