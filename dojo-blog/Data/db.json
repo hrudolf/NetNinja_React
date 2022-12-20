@@ -1,16 +1,28 @@
 {
-    "blogs": [
-        {
-            "title": "My second blog",
-            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel error veniam explicabo id suscipit nemo et, quia similique nulla expedita officia libero unde necessitatibus magni ducimus maxime repellat rerum laboriosam.",
-            "author": "rud",
-            "id": 1
-        },
-        {
-            "title": "Party",
-            "body": "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel error veniam explicabo id suscipit nemo et, quia similique nulla expedita officia libero unde necessitatibus magni ducimus maxime repellat rerum laboriosam.",
-            "author": "rud2",
-            "id": 2
-        }
-    ]
+  "blogs": [
+    {
+      "title": "My second blog",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel error veniam explicabo id suscipit nemo et, quia similique nulla expedita officia libero unde necessitatibus magni ducimus maxime repellat rerum laboriosam.",
+      "author": "rud",
+      "id": 1
+    },
+    {
+      "title": "Rudi's first post request using React",
+      "body": "Very interesting stuff indeed. Do you want to learn more? Watch NetNinja on youtube!",
+      "author": "rudi",
+      "id": 3
+    },
+    {
+      "title": "Button test",
+      "body": "Hello",
+      "author": "rudi",
+      "id": 4
+    },
+    {
+      "title": "History test",
+      "body": "Will we go back Home???",
+      "author": "rudi",
+      "id": 5
+    }
+  ]
 }
